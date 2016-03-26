@@ -1,0 +1,230 @@
+
+html {
+  height: 100%;
+} 
+
+body  {
+  height: 100%;
+  font-family: 'Lato', sans-serif;
+  font-weight: 400px;
+  letter-spacing: 1.4px;
+  text-shadow: 4px 2px 4px #000000;
+
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  /*font-family: 'Raleway', sans-serif;*/
+}
+
+body.home-background {
+  /*height: 100%; added to body & html instead*/
+  background-image: url(../img/landscape.jpg);
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-attachment: fixed;
+  background-size: cover;
+  overflow: auto;
+}
+
+body.partly-cloudy {
+  /*height: 100%;*/
+  background-image: url(../img/partlycloudy.jpg);
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-attachment: fixed;
+  background-size: cover;
+  overflow: auto;
+}
+
+body.clear {
+  /*height: 100%;*/
+  background-image: url(../img/clear-sky.jpg);
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-attachment: fixed;
+  background-size: cover;
+  overflow: auto;
+}
+
+body.cloudy {
+  /*height: 100%;*/
+  background-image: url(../img/cloudy.jpg);
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-attachment: fixed;
+  background-size: cover;
+  overflow: auto;
+}
+
+body.cloudy .weather {
+  color: #080808;
+  text-shadow: 4px 2px 4px #eee;
+}
+
+body.t-storms {
+  /*height: 100%;*/
+  background-image: url(../img/lightning-bolt.jpg);
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-attachment: fixed;
+  background-size: cover;
+  overflow: auto;
+}
+
+body.snow {
+  /*height: 100%;*/
+  background-image: url(../img/snow.jpg);
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-attachment: fixed;
+  background-size: cover;
+  overflow: auto;
+}
+
+body.rain {
+  /*height: 100%;*/
+  background-image: url(../img/rainy.jpg);
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-attachment: fixed;
+  background-size: cover;
+  overflow: auto;
+}
+
+body.night {
+  /*height: 100%;*/
+  background-image: url(../img/night.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
+  overflow: auto;
+}
+
+body.night .weather {
+  color: #E7EC31;
+  text-shadow: 4px 2px 4px #CA3030;
+}
+
+h1 {
+  margin-top: 75px;
+  font-family: 'Kalam', cursive;
+  color: #ffffff;
+  font-size: 60px;
+  font-weight: 700;
+  text-shadow: 4px 2px 4px #000000;
+}
+
+p {
+  font-size: 18px;
+}
+
+.greeting {
+  margin-top: 30px;
+}
+
+.greeting h2 {
+  color: #F7F7F7;
+  /*letter-spacing: 1.4px;*/
+  text-shadow: 2px 2px 4px #000000;
+}
+
+.location-prompt {
+  display: none;
+  margin-top: 40px;
+  font-family: 'Lato', sans-serif;
+  color: #ffffff;
+}
+
+#today, .weather-gif {
+  margin-top: 50px;
+}
+
+#location {
+  margin-top: 50px;
+  margin-bottom: 10px;
+  display: none;
+}
+
+/*#home-gif {
+  margin-top: 50px;
+}*/
+
+.opening-gif {
+  display: none;
+/*  margin-top: 50px;*/
+}
+
+.shown-gif {
+  display: block;
+  margin-top: 75px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.weather-comment {
+  color: #ffffff;
+}
+
+.weather {
+  color: #ffffff;
+}
+
+#currently {
+  font-size: 28px;
+}
+
+#feels-like, #sunrise, #location-full, #currently, #forecasted-high,
+  #forecasted-low, #sunrise, #sunset, #humidity, #precip, #uv-index {
+  display: inline-block;
+}
+
+#humidity, #sunset {
+  display: inline-block;
+  margin-left: 20px;
+}
+
+#zip {
+  display: inline-block;
+  margin-left: 5px;
+  font-size: 16px;
+}
+
+#currently, #combined-forecast  {
+  margin-left: 5px;
+}
+
+#precip, #uv-index {
+  margin-left: 12px;
+}
+
+#weather-stats {
+  padding-bottom: 50px;
+}
+
+#footer {
+  display: none;
+}
+
+#credit {
+  display: inline-block;
+}
+
+#wu-logo {
+  /*float: right;*/
+  max-width: 20%;
+}
+
+#giphy-logo {
+ /* float:right;*/
+  margin-top: 8px;
+  max-width: 20%;
+}
+
+
+

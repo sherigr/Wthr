@@ -112,7 +112,7 @@ $(function() {
 
 		$.ajax({ 
 			
-				url: 'http://api.wunderground.com/api/3def017e019b33b2/conditions/forecast/astronomy/q/US/' + location + '.json',
+				url: 'http://api.wunderground.com/api/[API KEY]/conditions/forecast/astronomy/q/US/' + location + '.json',
 				dataType: 'jsonp',
 
 				success: function(data) {

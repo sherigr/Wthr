@@ -112,7 +112,7 @@ $(function() {
 
 		$.ajax({ 
 			
-				url: 'http://api.wunderground.com/api/[API KEY]/conditions/forecast/astronomy/q/US/' + location + '.json',
+				url: 'http://api.wunderground.com/api/3def017e019b33b2/conditions/forecast/astronomy/q/US/' + location + '.json',
 				dataType: 'jsonp',
 
 				success: function(data) {
@@ -150,7 +150,7 @@ $(function() {
 					var hour = localHr.substr(localHr.indexOf(':') -2, 2);
 
 									
-					if(currentCondition === 'Rain' || currentCondition === 'Thunderstorms' || currentCondition === 'T-Storms' || currentCondition === "Thunderstorms and Rain") {
+					if(currentCondition === 'Rain' || currentCondition === 'Thunderstorms' || currentCondition === 'T-Storms' || currentCondition === "Thunderstorms and Rain" || currentCondition === 'Light Rain') {
 						weatherGif('cry')
 					} else {
 						weatherGif('dancing');
@@ -161,16 +161,16 @@ $(function() {
 					sunsetHr = sunsetHr - 12;
 
 					// API returns 999 string when none or sometimes " "
-					if(precip === "-999.00" || precip === "") {
+					if(precip === "-999.00" | precip === "0.00" || precip === "") {
 						precip = 0;
 					} 
 					// change returned string to number and remove decimal
-					precip = parseInt(precip).toFixed();
+					// precip = parseInt(precip).toFixed();
 					uvIndex = parseInt(uvIndex).toFixed();
 
 					// set background pictures based on current condition
 					function weatherBackground() {
-						if(currentCondition === "Rain" || currentCondition === "Drizzle" || currentCondition == 'Freezing Drizzle' || currentCondition === "Freezing Rain") {
+						if(currentCondition === "Rain" || currentCondition === "Drizzle" || currentCondition == 'Freezing Drizzle' || currentCondition === "Freezing Rain" || currentCondition === 'Light Rain') {
 							$('body').removeClass('home-background partly-cloudy clear cloudy t-storms snow night');
 							$('body').addClass('rain');
 							$('.weather-comment').html(rainyWeather());
@@ -190,7 +190,7 @@ $(function() {
 							$('body').addClass('t-storms');
 							$('.weather-comment').html(rainyWeather());
 						}
-						else if(currentCondition === "Snow" || currentCondition === "Blizzard" ) {
+						else if(currentCondition === "Snow" || currentCondition === "Light Snow" || currentCondition === "Blizzard" ) {
 							$('body').removeClass('home-background partly-cloudy rain cloudy t-storms clear night');
 							$('body').addClass('snow');
 							$('.weather-comment').html(snowCondition());

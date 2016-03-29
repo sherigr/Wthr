@@ -1,6 +1,8 @@
 
 html {
   height: 100%;
+  margin: 0;
+  padding: 0;
 } 
 
 body  {
@@ -22,7 +24,6 @@ h6 {
 }
 
 body.home-background {
-  /*height: 100%; added to body & html instead*/
   background-image: url(../img/landscape.jpg);
   background-repeat: no-repeat;
   background-position: center top;
@@ -32,7 +33,6 @@ body.home-background {
 }
 
 body.partly-cloudy {
-  /*height: 100%;*/
   background-image: url(../img/partlycloudy.jpg);
   background-repeat: no-repeat;
   background-position: center top;
@@ -42,7 +42,6 @@ body.partly-cloudy {
 }
 
 body.clear {
-  /*height: 100%;*/
   background-image: url(../img/clear-sky.jpg);
   background-repeat: no-repeat;
   background-position: center top;
@@ -52,7 +51,6 @@ body.clear {
 }
 
 body.cloudy {
-  /*height: 100%;*/
   background-image: url(../img/cloudy.jpg);
   background-repeat: no-repeat;
   background-position: left center;
@@ -67,7 +65,6 @@ body.cloudy .weather {
 }
 
 body.t-storms {
-  /*height: 100%;*/
   background-image: url(../img/lightning-bolt.jpg);
   background-repeat: no-repeat;
   background-position: left center;
@@ -77,8 +74,8 @@ body.t-storms {
 }
 
 body.snow {
-  /*height: 100%;*/
-  background-image: url(../img/snow.jpg);
+  /*background-image: url(../img/snowRed.jpg);*/
+  background-image: url(../img/snow-range.jpg);
   background-repeat: no-repeat;
   background-position: center top;
   background-attachment: fixed;
@@ -87,7 +84,6 @@ body.snow {
 }
 
 body.rain {
-  /*height: 100%;*/
   background-image: url(../img/rainy.jpg);
   background-repeat: no-repeat;
   background-position: center top;
@@ -97,7 +93,6 @@ body.rain {
 }
 
 body.night {
-  /*height: 100%;*/
   background-image: url(../img/night.jpg);
   background-repeat: no-repeat;
   background-position: center center;
@@ -130,7 +125,6 @@ p {
 
 .greeting h2 {
   color: #F7F7F7;
-  /*letter-spacing: 1.4px;*/
   text-shadow: 2px 2px 4px #000000;
 }
 
@@ -141,8 +135,12 @@ p {
   color: #ffffff;
 }
 
-#today, .weather-gif {
+#today {
   margin-top: 50px;
+}
+
+.weather-gif {
+  margin: 50px auto;
 }
 
 #location {
@@ -162,9 +160,10 @@ p {
 
 .shown-gif {
   display: block;
-  margin-top: 75px;
+/*  margin-top: 75px;
   margin-left: auto;
-  margin-right: auto;
+  margin-right: auto;*/
+  margin: 75px auto 25px;
 }
 
 .weather-comment {
@@ -216,15 +215,27 @@ p {
 }
 
 #wu-logo {
-  /*float: right;*/
-  max-width: 20%;
+  float: left;
+  /*margin-right: 15px;*/
 }
 
 #giphy-logo {
- /* float:right;*/
-  margin-top: 8px;
-  max-width: 20%;
+/*  margin-top: 8px;*/
+  padding-left: 15px;
 }
 
+@media (max-width: 768px) {
+  #wu-logo, #giphy-logo {
+    max-width: 20%;
+  }
+}
+@media (max-width: 400px) {
+  #wu-logo, #giphy-logo {
+    max-width: 30%;
+  }
+  h2 {
+    font-size: 26px;
+  }
+}
 
 

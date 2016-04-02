@@ -171,40 +171,33 @@ $(function() {
 					// set background pictures based on current condition
 					function weatherBackground() {
 						if(currentCondition === "Rain" || currentCondition === "Drizzle" || currentCondition == 'Freezing Drizzle' || currentCondition === "Freezing Rain" || currentCondition === 'Light Rain') {
-							$('body').removeClass('home-background partly-cloudy clear cloudy t-storms snow night');
-							$('body').addClass('rain');
+							$('body').attr('class', 'rain');
 							$('.weather-comment').html(rainyWeather());
 						}
 						else if(currentCondition === "Clear" || currentCondition === "Mostly Clear" || currentCondition === "Sun" || currentCondition === "Sunny" || currentCondition === "Mostly Sunny") {
-							$('body').removeClass('home-background partly-cloudy rain cloudy t-storms snow night');
-							$('body').addClass('clear');
+							$('body').attr('class', 'clear');
 							$('.weather-comment').html(clearWeather());
 						}
 						else if(currentCondition === "Mostly Cloudy" || currentCondition === "Cloudy" || currentCondition === "Overcast" || currentCondition === "Windy") {
-							$('body').removeClass('home-background partly-cloudy rain clear t-storms snow night');
-							$('body').addClass('cloudy');
+							$('body').attr('class', 'cloudy');
 							$('.weather-comment').html(cloudyWeather());
 						}
-						else if(currentCondition === "Thunderstorm" || currentCondition === "Thunderstorms and Rain") {
-							$('body').removeClass('home-background partly-cloudy rain cloudy clear snow night');
-							$('body').addClass('t-storms');
+						else if(currentCondition === "Thunderstorm" || currentCondition === "Thunderstorms and Rain" || currentCondition === "Light Thunderstorms and Rain") {
+							$('body').attr('class', 't-storms');
 							$('.weather-comment').html(rainyWeather());
 						}
 						else if(currentCondition === "Snow" || currentCondition === "Light Snow" || currentCondition === "Blizzard" ) {
-							$('body').removeClass('home-background partly-cloudy rain cloudy t-storms clear night');
-							$('body').addClass('snow');
+							$('body').attr('class', 'snow');
 							$('.weather-comment').html(snowCondition());
 						}
 						//if hour of location searched is 6 or later
 						else if(hour >= 18) {
-							$('body').removeClass('home-background partly-cloudy rain cloudy t-storms snow clear');
-							$('body').addClass('night');
+							$('body').attr('class', 'night');
 							$('.weather-comment').html(evening());
 							// $('.weather').css('color', '#E7EC31'); added to CSS
 						}
 						else {
-							$('body').removeClass('home-background clear rain cloudy t-storms snow night');
-							$('body').addClass('partly-cloudy');
+							$('body').attr('class', 'partly-cloudy');
 							$('.weather-comment').html(partlyCloudy());
 						}
 					}
